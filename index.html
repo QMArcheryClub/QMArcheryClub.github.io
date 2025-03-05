@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QMAC Club Rankings</title>
+    <link rel="icon" type="image/jpg" href="qmac_logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: "Gill Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            max-height: 300px;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: rgba(76, 127, 175, 0.8);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(58, 107, 153, 0.9);
+        }
+
+        .main-content {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #004080;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4c7faf;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e1ecf4;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                width: 100%;
+                padding: 10px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="banner">
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="rankings.html">Rankings</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <img src="QMAC_banner.png" alt="QMAC Banner" loading="eager">
+    </header>
+    
+    <main class="main-content">
+        <h2>24'-25' Unbracketed Club Scores</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Competitor</th>
+                    <th>Bracket</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Mikat Sikder Munni</td><td>Barebow Experienced Men</td><td><a href="https://www.tamlynscore.co.uk/tournaments/royal-holloway-seal-2024-1/score-sheet/34278/">516</a></td></tr>
+                <tr><td>2</td><td>Harry Bloomfield</td><td>Barebow Experienced Men</td><td><a href="https://www.tamlynscore.co.uk/tournaments/surrey-seal-2024/score-sheet/33384/">478</a></td></tr>
+                <tr><td>3</td><td>Artur Baran</td><td>Recurve Experienced Men</td><td><a href="https://www.tamlynscore.co.uk/tournaments/surrey-seal-2024/score-sheet/33378/">460</a></td></tr>
+                <tr><td>4</td><td>Penny Garwood</td><td>Recurve Experienced Women</td><td><a href="https://www.tamlynscore.co.uk/tournaments/royal-holloway-seal-2024-1/score-sheet/34273/">451</a></td></tr>
+                <tr><td>5</td><td>Thomas Davis</td><td>Barebow Experienced Men</td><td><a href="https://www.tamlynscore.co.uk/tournaments/royal-holloway-seal-2024-1/score-sheet/34283/">449</a></td></tr>
+                <tr><td>6</td><td>Zahraa Abrahams</td><td>Recurve Experienced Women</td><td><a href="https://www.tamlynscore.co.uk/tournaments/southampton-seal-2025/score-sheet/35738/">427</a></td></tr>
+            </tbody>
+        </table>
+    </main>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
