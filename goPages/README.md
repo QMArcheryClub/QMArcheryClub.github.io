@@ -1,5 +1,6 @@
 # Go Pages
 The program made here (currently unmade) will compile the pages in the `templates` folder and write to the `docs` folder. 
+Template system will be made using [golang html templates](https://pkg.go.dev/html/template)
 
 It will use the `rankings.csv` file to add items to the database, and from the database it will construct the `rankings.html` page. 
 
