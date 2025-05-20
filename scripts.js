@@ -3,20 +3,16 @@ const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-xux3ZfTOFNCw
 
 fetch(CSV_URL)
   .then(r => r.text())
-  .then(text => {
-    const lines = text.trim().split('\n').filter(Boolean);
-    // skip header row
-    const rows  = lines.slice(1);
+  .then(csv => {
+    // 1) split into lines, drop any blank ones
+    const lines = csv.trim().split(/\r?\n/).filter(Boolean);
 
-    const data = rows.map(line => {
-      // split into columns
-      const cols = line.split(',');
-      // if there's an extra blank first col, drop it:
-      if (cols[0] === '') cols.shift();
+    // 2) pull off the header, keep everything else as data
+    const dataLines = lines.slice(1);
 
-      // now cols = [Name, Discipline, Score]
-      const [competitor, discipline, scoreStr] = cols;
-
+    // 3) parse each line into our trio of fields
+    const data = dataLines.map(line => {
+      const [competitor, discipline, scoreStr] = line.split(',');
       return {
         competitor: competitor.trim(),
         discipline: discipline.trim(),
@@ -24,23 +20,22 @@ fetch(CSV_URL)
       };
     });
 
-    // sort and render as before…
-    data.sort((a,b) => b.score - a.score);
+    // 4) sort by score descending (just in case)
+    data.sort((a, b) => b.score - a.score);
+
+    // 5) render into your table
     const tbody = document.getElementById('leaderboard-body');
-    tbody.innerHTML = '';
-    data.forEach((row,i) => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>${i+1}</td>
-        <td>${row.competitor}</td>
-        <td>${row.discipline}</td>
-        <td>${row.score}</td>
-      `;
-      tbody.appendChild(tr);
-    });
+    tbody.innerHTML = data.map((row, i) =>
+      `<tr>
+         <td>${i + 1}</td>
+         <td>${row.competitor}</td>
+         <td>${row.discipline}</td>
+         <td>${row.score}</td>
+       </tr>`
+    ).join('');
   })
   .catch(err => {
     console.error(err);
-    document.getElementById('leaderboard-body')
-      .innerHTML = '<tr><td colspan="4">Error loading data</td></tr>';
+    document.getElementById('leaderboard-body').innerHTML =
+      '<tr><td colspan="4">Error loading data</td></tr>';
   });
