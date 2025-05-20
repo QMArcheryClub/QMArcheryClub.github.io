@@ -1,5 +1,5 @@
 // 1) Replace with your actual published-CSV URL:
-const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/YOUR_SHEET_ID/pub?output=csv';
+const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/1LvD_5QjcHqzROhzVDpua3y43-yei33pAFDuhzgtyR0w/pub?output=csv';
 
 /**
  * Fetch, parse, sort by score descending,
