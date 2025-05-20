@@ -1,5 +1,9 @@
 // 1) Replace with your actual published-CSV URL:
-const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-xux3ZfTOFNCwqCXUMEVl9MD91C_gNXx3wNpybNlG0VIRiDVCb666M84zehBgwJDyv-6pVz5glDpf/pub?gid=145164873&single=true&output=csv';
+const CSV_URL_BASE = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-xux3ZfTOFNCwqCXUMEVl9MD91C_gNXx3wNpybNlG0VIRiDVCb666M84zehBgwJDyv-6pVz5glDpf/pub?gid=145164873&single=true&output=csv';
+
+const CSV_URL = `${CSV_URL_BASE}&_=${Date.now()}`;
+fetch(CSV_URL, { cache: 'no-store' })
+  .then(/* … */)
 
 fetch(CSV_URL)
   .then(r => r.text())
