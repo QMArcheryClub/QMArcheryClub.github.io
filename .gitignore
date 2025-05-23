@@ -1,2 +1,5 @@
 
-goPages/*
+
+localNginx.conf
+goPages/
+
