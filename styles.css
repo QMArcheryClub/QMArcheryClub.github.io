@@ -150,10 +150,10 @@ added after rankings options
   background-color: #f2f2f2;
 }
 
-.rankingdrpdn:hover + .dropdown-content {
+.rankingdrpdn:hover + .ranking-dropdown {
   display: block;
 }
-.dropdown:hover .dropbtn {
+.dropdown:hover .rankingdrpdn {
   background-color: rgba(58, 107, 153, 0.9);
 }
 
