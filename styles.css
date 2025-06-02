@@ -103,7 +103,7 @@ tr:hover {
     margin: 4px 0;
   }
 
-  .dropdown-content {
+  .ranking-dropdown {
     position: static;
     box-shadow: none;
     border-radius: 0;
@@ -119,14 +119,14 @@ added after rankings options
   display: inline-block;
 }
 
-.dropdown .dropbtn {
+.dropdown .rankingdrpdn {
   color: white;
   padding: 14px 20px;
   text-decoration: none;
   font-size: 18px;
 }
 
-.dropdown-content {
+.ranking-dropdown {
   display: none;
   position: absolute;
   top: 100%;
@@ -138,7 +138,7 @@ added after rankings options
   z-index: 1000;
 }
 
-.dropdown-content a {
+.ranking-dropdown a {
   color: #333;
   padding: 10px 16px;
   text-decoration: none;
@@ -146,11 +146,11 @@ added after rankings options
   font-size: 16px;
 }
 
-.dropdown-content a:hover {
+.ranking-dropdown a:hover {
   background-color: #f2f2f2;
 }
 
-.dropbtn:hover + .dropdown-content {
+.rankingdrpdn:hover + .dropdown-content {
   display: block;
 }
 .dropdown:hover .dropbtn {
