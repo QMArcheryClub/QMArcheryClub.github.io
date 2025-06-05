@@ -1,50 +1,3 @@
-<!--<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>QMAC Club Rankings</title>
-    <link rel="icon" type="image/jpg" href="images/qmac logo.jpg">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-        <nav class="navbar">
-            <!--<a href="index.html">Home</a>
-            <div class="dropdown">
-                <a href="#" class="rankingdrpdn">Rankings</a>
-                <div class="ranking-dropdown">
-                    <a href="rankings.html">Complete Rankings</a>
-                    <a href="rankings-category1.html">Category 1</a>
-                    <a href="rankings-category2.html">Category 2</a>
-                    <a href="rankings-category3.html">Category 3</a>
-                </div>
-            </div>
-            <div class="navbar-title">Queen Mary Archery Club</div>
-            <div class="navbar-links" id="navbarLinks"> <!-- Added id for JS toggle
-                <a href="index.html">Home</a>
-                <div class="ranking"> <!-- This div is the container for the dropdown
-                    <a href="rankings/rankings.html" aria-haspopup="true" aria-expanded="false">Rankings</a> <!-- Main "Rankings" link
-                    <div class="ranking-dropdown"> <!-- Dropdown content
-                        <a href="rankings.html">24-25</a>
-                        <a href="index.html">bla bla</a>
-                        <a href="index.html">yeet</a>
-                    </div>
-                </div>
-                    <!-- Add other main navigation links here if needed
-            </div>
-            <div class="navbar-toggle" id="navbarToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    <header class="banner">
-        <!--<img src="images/QMAC banner.png" alt="QMAC Banner" loading="eager">
-    </header>
-    
-    
-    <script src="scripts.js"></script>
-</body>
-</html>-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -62,24 +15,22 @@
             background-color: #f4f4f4;
             color: #333;
         }
-
-        /* Navigation bar styling */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #3b5998; /* Facebook-like blue */
+            background-color: #3b5998;
             padding: 10px 20px;
             color: white;
             position: sticky;
             top: 0;
-            z-index: 1000; /* Ensures navbar stays on top */
+            z-index: 1000;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-logo img {
-            height: 40px; /* Adjust as needed */
-            border-radius: 50%; /* Makes the logo circular if it's square */
+            height: 40px; 
+            border-radius: 50%;
         }
 
         .navbar-title {
@@ -164,29 +115,27 @@
         /* Banner styling */
         .banner {
             width: 100%;
-            max-height: 300px; /* Adjust as needed */
-            overflow: hidden; /* Ensures the image doesn't overflow the container */
-            position: relative; /* For potential text overlay if needed */
+            max-height: 300px; 
+            overflow: hidden; 
+            position: relative; 
         }
 
         .banner img {
             width: 100%;
-            height: auto; /* Maintain aspect ratio */
+            height: auto; 
             display: block;
         }
-
-        /* Main content area */
         .main-content {
             padding: 20px;
             margin: 20px auto;
-            max-width: 900px; /* Or your preferred max width */
+            max-width: 900px; 
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
         h1, h2 {
-            color: #004080; /* Dark blue for headings */
+            color: #004080; 
         }
 
         /* This is only used for Homepage thus far 02/06/2025 */
@@ -220,7 +169,7 @@
             background-color: #e1ecf4; /* Highlight on hover */
         }
 
-        /* Responsive adjustments for smaller screens */
+        /*adjustments for smaller screens */
         @media (max-width: 768px) {
             .navbar-links {
                 display: none; /* Hide links by default on mobile */
@@ -248,7 +197,7 @@
             }
 
             .navbar-toggle {
-                display: flex; /* Show hamburger */
+                display: flex;
             }
 
             .navbar-title {
@@ -333,27 +282,6 @@
             </tbody>
         </table>
     </div>
-
-    <!-- JavaScript for Mobile Menu Toggle -->
-    <script>
-        // scripts.js (or inline script)
-        // This script is for the mobile navigation toggle
-        // (The one in the image was empty, so I'm adding basic functionality)
-        document.addEventListener('DOMContentLoaded', function () {
-            const navbarToggle = document.getElementById('navbarToggle');
-            const navbarLinks = document.getElementById('navbarLinks');
-
-            if (navbarToggle && navbarLinks) {
-                navbarToggle.addEventListener('click', function () {
-                    navbarLinks.classList.toggle('active');
-
-                    // Optional: Change hamburger to X icon
-                    navbarToggle.classList.toggle('active');
-                    // You would need to add CSS for .navbar-toggle.active span transformations for X icon
-                });
-            }
-        });
-    </script>
-    <!-- <script src="scripts.js"></script> --> <!-- Keep this if you move the JS to an external file -->
+    <script src="scripts.js"></script>
 </body>
 </html>
