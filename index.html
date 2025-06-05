@@ -1,4 +1,4 @@
-<html lang="en">
+<!--<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,19 +17,19 @@
                     <a href="rankings-category2.html">Category 2</a>
                     <a href="rankings-category3.html">Category 3</a>
                 </div>
-            </div>-->
+            </div>
             <div class="navbar-title">Queen Mary Archery Club</div>
-            <div class="navbar-links" id="navbarLinks"> <!-- Added id for JS toggle -->
+            <div class="navbar-links" id="navbarLinks"> <!-- Added id for JS toggle
                 <a href="index.html">Home</a>
-                <div class="ranking"> <!-- This div is the container for the dropdown -->
-                    <a href="rankings/rankings.html" aria-haspopup="true" aria-expanded="false">Rankings</a> <!-- Main "Rankings" link -->
-                    <div class="ranking-dropdown"> <!-- Dropdown content -->
+                <div class="ranking"> <!-- This div is the container for the dropdown
+                    <a href="rankings/rankings.html" aria-haspopup="true" aria-expanded="false">Rankings</a> <!-- Main "Rankings" link
+                    <div class="ranking-dropdown"> <!-- Dropdown content
                         <a href="rankings.html">24-25</a>
                         <a href="index.html">bla bla</a>
                         <a href="index.html">yeet</a>
                     </div>
                 </div>
-                    <!-- Add other main navigation links here if needed -->
+                    <!-- Add other main navigation links here if needed
             </div>
             <div class="navbar-toggle" id="navbarToggle">
                 <span></span>
@@ -38,10 +38,322 @@
             </div>
         </nav>
     <header class="banner">
-        <!--<img src="images/QMAC banner.png" alt="QMAC Banner" loading="eager">-->
+        <!--<img src="images/QMAC banner.png" alt="QMAC Banner" loading="eager">
     </header>
     
     
     <script src="scripts.js"></script>
+</body>
+</html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QMAC</title>
+    <!-- It's generally better to keep all styles in an external CSS file like styles.css -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="icon" type="image/x-icon" href="images/qmac logo.jpg">
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navigation bar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3b5998; /* Facebook-like blue */
+            padding: 10px 20px;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensures navbar stays on top */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-logo img {
+            height: 40px; /* Adjust as needed */
+            border-radius: 50%; /* Makes the logo circular if it's square */
+        }
+
+        .navbar-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .navbar-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-links a:hover,
+        .navbar-links a.active { /* Style for active page link */
+            background-color: #2a4887; /* Darker shade on hover/active */
+            border-radius: 4px;
+        }
+
+        /* Styles for the rankings dropdown */
+        .ranking {
+            position: relative;
+            display: inline-block; /* Allows it to sit nicely in the navbar */
+        }
+
+        .ranking-dropdown {
+            display: none; /* Hidden by default */
+            position: absolute;
+            background-color: white; /* Dropdown background */
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 4px; /* Rounded corners for the dropdown */
+            margin-top: 0px; /* Align with the bottom of the navbar link */
+        }
+
+        .ranking-dropdown a {
+            color: black; /* Text color for dropdown links */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left; /* Align text to the left */
+            font-size: 14px; /* Slightly smaller font for dropdown items */
+        }
+
+        .ranking-dropdown a:hover {
+            background-color: #ddd; /* Hover effect for dropdown links */
+        }
+
+        /* Show the dropdown menu on hover */
+        .ranking:hover .ranking-dropdown {
+            display: block;
+        }
+
+
+        /* Hamburger menu for mobile */
+        .navbar-toggle {
+            display: none; /* Hidden by default, shown on mobile */
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .navbar-toggle span {
+            background: white;
+            border-radius: 2px;
+            display: block;
+            height: 3px;
+            margin: 4px 0;
+            width: 25px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Banner styling */
+        .banner {
+            width: 100%;
+            max-height: 300px; /* Adjust as needed */
+            overflow: hidden; /* Ensures the image doesn't overflow the container */
+            position: relative; /* For potential text overlay if needed */
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+        }
+
+        /* Main content area */
+        .main-content {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px; /* Or your preferred max width */
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            color: #004080; /* Dark blue for headings */
+        }
+
+        /* This is only used for Homepage thus far 02/06/2025 */
+        h3 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Collapses cell borders */
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd; /* Light grey border */
+            padding: 12px;
+            text-align: left;
+            font-size: 14px; /* Slightly smaller font for table content */
+        }
+
+        th {
+            background-color: #4c7faf; /* Header background color */
+            color: white; /* Header text color */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Zebra striping for rows */
+        }
+
+        tr:hover {
+            background-color: #e1ecf4; /* Highlight on hover */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .navbar-links {
+                display: none; /* Hide links by default on mobile */
+                flex-direction: column;
+                width: 100%;
+                background-color: #3b5998; /* Match navbar */
+                position: absolute;
+                top: 60px; /* Position below the navbar */
+                left: 0;
+                padding: 10px 0; /* Add some padding */
+            }
+
+            .navbar-links.active { /* Class to show links when toggle is clicked */
+                display: flex;
+            }
+
+            .navbar-links a {
+                text-align: center;
+                padding: 10px;
+                border-bottom: 1px solid #4a6bae; /* Separator for links */
+            }
+
+            .navbar-links a:last-child {
+                border-bottom: none;
+            }
+
+            .navbar-toggle {
+                display: flex; /* Show hamburger */
+            }
+
+            .navbar-title {
+                font-size: 1.2em; /* Adjust title size for smaller screens */
+            }
+
+            .ranking-dropdown { /* Ensure dropdown behaves well on mobile */
+                position: static; /* Change from absolute to static */
+                box-shadow: none;
+                border-top: 1px solid #4a6bae;
+                border-radius: 0;
+            }
+             .ranking-dropdown a {
+                padding: 10px 20px; /* Adjust padding for mobile view */
+             }
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="index.html"><img src="images/qmac logo.jpg" alt="QMAC Logo"></a>
+        </div>
+        <div class="navbar-title">Queen Mary Archery Club</div>
+        <div class="navbar-links" id="navbarLinks"> <!-- Added id for JS toggle -->
+            <a href="index.html">Home</a>
+            <div class="ranking"> <!-- This div is the container for the dropdown -->
+                <a href="rankings/rankings.html" aria-haspopup="true" aria-expanded="false">Rankings</a> <!-- Main "Rankings" link -->
+                <div class="ranking-dropdown"> <!-- Dropdown content -->
+                    <a href="rankings/category1.html">Category 1</a>
+                    <a href="rankings/category2.html">Category 2</a>
+                    <a href="rankings/category3.html">Category 3</a>
+                </div>
+            </div>
+            <!-- Add other main navigation links here if needed -->
+        </div>
+        <div class="navbar-toggle" id="navbarToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Banner Image -->
+    <div class="banner">
+        <img src="images/QMAC banner.png" alt="QMAC Banner" loading="eager">
+    </div>
+
+    <!-- Placeholder for main content of the page -->
+    <div class="main-content">
+        <h1>Welcome to the Queen Mary Archery Club</h1>
+        <p>This is a placeholder for the main content of your page. You can add information, news, event details, etc., here.</p>
+        <!-- Example Table - you can remove or modify this -->
+        <h2>Upcoming Events</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2025-07-01</td>
+                    <td>Beginner's Workshop</td>
+                    <td>Club Range</td>
+                </tr>
+                <tr>
+                    <td>2025-07-15</td>
+                    <td>Friendly Competition</td>
+                    <td>Club Range</td>
+                </tr>
+                <tr>
+                    <td>2025-08-05</td>
+                    <td>Advanced Coaching</td>
+                    <td>Indoor Hall</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        // scripts.js (or inline script)
+        // This script is for the mobile navigation toggle
+        // (The one in the image was empty, so I'm adding basic functionality)
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbarToggle = document.getElementById('navbarToggle');
+            const navbarLinks = document.getElementById('navbarLinks');
+
+            if (navbarToggle && navbarLinks) {
+                navbarToggle.addEventListener('click', function () {
+                    navbarLinks.classList.toggle('active');
+
+                    // Optional: Change hamburger to X icon
+                    navbarToggle.classList.toggle('active');
+                    // You would need to add CSS for .navbar-toggle.active span transformations for X icon
+                });
+            }
+        });
+    </script>
+    <!-- <script src="scripts.js"></script> --> <!-- Keep this if you move the JS to an external file -->
 </body>
 </html>
