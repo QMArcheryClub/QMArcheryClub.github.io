@@ -1,14 +1,11 @@
 
-run:
-	cd goPages && go build && go run .
-
-test:
-	cd goPages && go test -cover
-
-coverage:
-	cd goPages && go test -coverprofile cover.out && go tool cover -html=cover.out
 
 build:
+	# use the template generator tool
+	./template-compiler 	
+
+
+copy:
 	# copy stuff
 	sudo cp ./localNginx.conf /etc/nginx/sites-enabled/qmac
 
