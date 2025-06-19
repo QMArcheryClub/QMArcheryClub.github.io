@@ -16,3 +16,9 @@ jobs:
 
     - name: Build HTML pages
       run: make build
+
+    - name: test content
+      run: ls
+
+    - name: test git
+      run: git status
