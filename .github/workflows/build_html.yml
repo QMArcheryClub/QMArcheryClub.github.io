@@ -1,4 +1,4 @@
-name: Makefile build markdown into html pages
+name: build_html
 
 on:
   push:
@@ -17,8 +17,3 @@ jobs:
     - name: Build HTML pages
       run: make build
 
-    - name: test content
-      run: ls
-
-    - name: test git
-      run: git status
