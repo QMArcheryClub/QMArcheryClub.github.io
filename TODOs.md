@@ -1,6 +1,6 @@
 # Site Layout
 
-- [ ] index.html
+- [x] index.html
 - [ ] events
 - [ ] committee page
 - [ ] contact us  
