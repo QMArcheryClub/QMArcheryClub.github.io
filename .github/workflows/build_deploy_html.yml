@@ -35,14 +35,11 @@ jobs:
     - name: Compile HTML pages
       run: make build
 
-    - name: Checkout Production branch
-      run: git checkout production
-
     - name: Add new files
       run: git add .
 
     - name: Push to Production
-      run: git commit -m "built latest files" && git push
+      run: git commit -m "built latest files" && git push origin origin/production
 
   # Single deploy job since we're just deploying
   deploy:
