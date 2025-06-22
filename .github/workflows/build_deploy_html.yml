@@ -35,6 +35,9 @@ jobs:
     - name: Compile HTML pages
       run: make build
 
+    - name: check what checkout does for origin
+      run: git remote
+
 
   # Single deploy job since we're just deploying
   deploy:
