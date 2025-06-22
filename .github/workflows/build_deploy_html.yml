@@ -35,9 +35,14 @@ jobs:
     - name: Compile HTML pages
       run: make build
 
-    - name: check what checkout does for origin
-      run: git remote
+    - name: Checkout Production branch
+      run: git checkout production
 
+    - name: Add new files
+      run: git add .
+
+    - name: Push to Production
+      run: git commit -m "built latest files" && git push
 
   # Single deploy job since we're just deploying
   deploy:
@@ -51,6 +56,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Checkout production branch
+        run: git checkout production
+        
         # 
       - name: Setup Pages
         uses: actions/configure-pages@v5
