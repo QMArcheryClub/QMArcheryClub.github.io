@@ -52,10 +52,10 @@ jobs:
       # allows workflow access the repository
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: production
 
-      - name: Checkout production branch
-        run: git checkout production
-        
+
         # 
       - name: Setup Pages
         uses: actions/configure-pages@v5
