@@ -1,6 +1,15 @@
 # Build's and deploys HTML pages to the github pages site
 name: Build and Deploy
 
+# General sequence of steps:
+# build:
+#   compiles all the templates
+#   uploads a zip of docs folder for deploy to use (upload-artifact)
+# deploy:
+#   download docs folder artifact
+#   upload docs folder as artifact to pages
+#
+
 # Triggers: Push to main; Pull request to main; Manual
 on:
   push:
@@ -35,26 +44,33 @@ jobs:
     - name: Compile HTML pages
       run: make build
 
-    - name: Add new files
-      run: git add .
-
-    - name: Push to Production
-      run: git commit -m "built latest files" && git push origin origin/production
+    - name: Upload Docs folder
+      uses: actions/upload-artifact@v4
+      with:
+        name: pages-content
+        path: ./docs/
 
   # Single deploy job since we're just deploying
   deploy:
+    needs: build
+
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
 
-      # allows workflow access the repository
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: production
 
+      # Download artifact
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with: 
+          name: pages-content
+          path: ./docs/
+
+      - name: check content
+        run: ls
 
         # 
       - name: Setup Pages
