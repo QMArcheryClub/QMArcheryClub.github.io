@@ -41,6 +41,5 @@
     <div class="main-content">
 {{.}}
 </div>
-    <script src="scripts.js"></script>
 </body>
 </html>
