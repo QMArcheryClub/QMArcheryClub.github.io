@@ -2,7 +2,7 @@
 
 build:
 	# use the template generator tool
-	./template-compiler 	
+	./template-compiler -t content 	
 
 
 copy:
