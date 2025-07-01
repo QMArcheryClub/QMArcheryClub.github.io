@@ -4,6 +4,8 @@ build:
 	# use the template generator tool
 	./template-compiler -t content 	
 
+tree:
+	tree content docs
 
 copy:
 	# copy stuff

@@ -2,5 +2,6 @@
 
 localNginx.conf
 goPages/
+docs/
 attemptLog.lg
 
