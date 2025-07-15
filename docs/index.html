@@ -11,7 +11,7 @@
     <nav class="navbar">
       <div class="navbar-logo">
         <a href="index.html">
-          <img src="images/qmac-logo.jpg" alt="QMAC Logo"/>
+          <img src="/static/images/qmac-logo.jpg" alt="QMAC Logo"/>
         </a>
       </div>
       <div class="navbar-title">Queen Mary Archery Club</div>
