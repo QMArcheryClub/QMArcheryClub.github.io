@@ -21,6 +21,7 @@
           
           <ul class="nav-content-dropdown"> 
           <li><a href="/meet-the-committee.html">Committee</a></li>
+          <li><a href="/events/index.html">Events 2025</a></li>
           </ul>
         </li>
         <li class="nav-dropdown">
