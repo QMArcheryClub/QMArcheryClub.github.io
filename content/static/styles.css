@@ -7,6 +7,51 @@ body {
     color: #333;
 }
 
+
+
+section.main-content {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.logo img {
+    height: 0px;
+    border-radius: 50%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3b5998;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-dropdown a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -20,47 +65,24 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-logo img {
-    height: 40px;
-    border-radius: 50%;
-}
-
-.navbar-title {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.navbar-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
+.navbar ul {
+    list-style-type: none;
+    /* Remove bullets */
     padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margins */
 }
 
-.navbar-links a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-    display: block;
-    transition: background-color 0.3s ease;
+/* Make Nav Links Flex */
+.nav-links {
+    display: flex;
+    flex-direction: row;
 }
 
-.navbar-links a:hover,
-.navbar-links a.active {
-    /* Style for active page link */
-    background-color: #2a4887;
-    /* Darker shade on hover/active */
-    border-radius: 4px;
-}
 
-/* Styles and Logic for the rankings dropdown */
-.ranking {
-    position: relative;
-    display: inline-block;
-    /* Allows it to sit nicely in the navbar */
-}
 
-.ranking-dropdown {
+.nav-content-dropdown {
     display: none;
     /* Hidden by default */
     position: absolute;
@@ -75,99 +97,24 @@ body {
     /* Align with the bottom of the navbar link */
 }
 
-.ranking-dropdown li a {
-    color: black;
-    /* Text color for dropdown links */
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    /* Align text to the left */
-    font-size: 14px;
-    /* Slightly smaller font for dropdown items */
-}
 
-.ranking-dropdown a:hover {
-    background-color: #ddd;
+.nav-dropdown:hover .nav-content-dropdown {
+    display: block;
+    background-color: #2a4887;
     /* Hover effect for dropdown links */
 }
 
-/* Show the dropdown menu on hover */
-.ranking:hover .ranking-dropdown {
-    display: block;
-}
 
-/* Hamburger menu for mobile */
-.navbar-toggle {
-    display: none;
-    /* Hidden by default, shown on mobile */
-    flex-direction: column;
-    cursor: pointer;
-}
 
-.navbar-toggle span {
-    background: white;
-    border-radius: 2px;
-    display: block;
-    height: 3px;
-    margin: 4px 0;
-    width: 25px;
-    transition: all 0.3s ease-in-out;
-}
 
-/* Banner styling */
-.banner {
-    width: 100%;
-    max-height: 300px;
-    overflow: hidden;
-    position: relative;
-}
 
-.banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.main-content {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 900px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1,
-h2 {
-    color: #004080;
-}
-
-/* This is only used for Homepage thus far 02/06/2025 */
-h3 {
-    color: #333;
-}
-
+/* Table CSS Stylings */
 table {
     width: 100%;
     border-collapse: collapse;
     /* Collapses cell borders */
     margin-top: 20px;
 }
-
-/*
-        table {
-          width: 100%;
-          border-collapse: collapse;
-          margin: 20px 0;
-          font-size: 18px;
-          text-align: left;
-          background: white;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          border-radius: 8px;
-          overflow: hidden;
-        }
-        */
 
 th,
 td {
@@ -194,66 +141,4 @@ tr:nth-child(even) {
 tr:hover {
     background-color: #e1ecf4;
     /* Highlight on hover */
-}
-
-@media (max-width: 768px) {
-
-    .main-content {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .navbar-links {
-        display: none;
-        /* Hide links by default on mobile */
-        flex-direction: column;
-        width: 100%;
-        background-color: #3b5998;
-        /* Match navbar */
-        position: absolute;
-        top: 60px;
-        /* Position below the navbar */
-        left: 0;
-        padding: 10px 0;
-        /* Add some padding */
-    }
-
-    .navbar-links.active {
-        /* Class to show links when toggle is clicked */
-        display: flex;
-    }
-
-    .navbar-links a {
-        text-align: center;
-        padding: 10px;
-        border-bottom: 1px solid #4a6bae;
-        /* Separator for links */
-    }
-
-    .navbar-links a:last-child {
-        border-bottom: none;
-    }
-
-    .navbar-toggle {
-        display: flex;
-    }
-
-    .navbar-title {
-        font-size: 1.2em;
-        /* Adjust title size for smaller screens */
-    }
-
-    .ranking-dropdown {
-        /* Ensure dropdown behaves well on mobile */
-        position: static;
-        /* Change from absolute to static */
-        box-shadow: none;
-        border-top: 1px solid #4a6bae;
-        border-radius: 0;
-    }
-
-    .ranking-dropdown a {
-        padding: 10px 20px;
-        /* Adjust padding for mobile view */
-    }
 }

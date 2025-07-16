@@ -8,22 +8,39 @@
   <body>
 
     <header>
-        <a class="navbar-logo" href="index.html">
+        <a class="logo" href="index.html">
           <img src="/static/images/qmac-logo.jpg" alt="QMAC Logo"/>
         </a>
-      <h1 class="navbar-title">Queen Mary Archery Club</h1>
+      <h1 class="title">Queen Mary Archery Club</h1>
     <nav class="navbar">
-      <ul class="navbar-links" id="navbarLinks">
+      <ul class="nav-links" >
+    
         <!-- Added id for JS toggle -->
+        <li class="nav-dropdown">
+          <a href=".">INDEX</a>       
+        </li>
+        <li class="nav-dropdown">
+          <a href=".">Rankings</a>
+
+          <ul class="nav-content-dropdown"> 
+          <li><a href="">ASD</a></li>
+          <li><a href="">ASD</a></li>
+          </ul>
+        </li>
+  
+
+
+
+<!--
         <div class="ranking">
-          <!-- This div is the container for the dropdown -->
+          <!-- This div is the container for the dropdown --
           <a href="index.html" 
           aria-haspopup="true" aria-expanded="false">
-            Rankings
+          Rankings
         </a>
-          <!-- Main "Rankings" link -->
+          <!-- Main "Rankings" link --
           <ul class="ranking-dropdown">
-            <!-- Dropdown content -->
+            <!-- Dropdown content --
             <li><a href="meet-the-committee.html">Committee</a></li>  
             <li><a href="rankings/24-25.html">Rankings 24-25</a></li>  
           </ul>
@@ -33,7 +50,7 @@
         <span>ASD</span>
         <span>ASD</span>
         <span></span>
-      </div>
+      </div> -->
     </nav>
     </header>
 
@@ -45,7 +62,6 @@
     </section>
 
     <footer class="screen-bar">
-    ASD
     </footer>
   </body>
 </html>
