@@ -19,7 +19,7 @@
         <li class="nav-dropdown">
           <a href="/">Home</a>       
           
-          <ul class="nav-content-dropdown"> 
+          <ul class="nav-dropdown-content"> 
           <li><a href="/meet-the-committee.html">Committee</a></li>
           <li><a href="/events/index.html">Events 2025</a></li>
           </ul>
@@ -27,8 +27,8 @@
         <li class="nav-dropdown">
           <a href="/">Rankings</a>
 
-          <ul class="nav-content-dropdown"> 
-          <li><a href="/rankings/24-25.html">ASD</a></li>
+          <ul class="nav-dropdown-content"> 
+          <li><a href="/rankings/24-25.html">24-25</a></li>
           </ul>
         </li>
     </nav>
