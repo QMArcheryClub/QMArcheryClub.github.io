@@ -27,30 +27,6 @@
           <li><a href="">ASD</a></li>
           </ul>
         </li>
-  
-
-
-
-<!--
-        <div class="ranking">
-          <!-- This div is the container for the dropdown --
-          <a href="index.html" 
-          aria-haspopup="true" aria-expanded="false">
-          Rankings
-        </a>
-          <!-- Main "Rankings" link --
-          <ul class="ranking-dropdown">
-            <!-- Dropdown content --
-            <li><a href="meet-the-committee.html">Committee</a></li>  
-            <li><a href="rankings/24-25.html">Rankings 24-25</a></li>  
-          </ul>
-        </ul>
-      </div>
-      <div class="navbar-toggle" id="navbarToggle">
-        <span>ASD</span>
-        <span>ASD</span>
-        <span></span>
-      </div> -->
     </nav>
     </header>
 
