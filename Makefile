@@ -1,7 +1,5 @@
 
-
 build:
-	rm -rd docs
 	# use the template generator tool
 	./template-compiler -t content 	
 
