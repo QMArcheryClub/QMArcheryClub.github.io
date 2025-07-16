@@ -17,14 +17,17 @@
     
         <!-- Added id for JS toggle -->
         <li class="nav-dropdown">
-          <a href=".">INDEX</a>       
+          <a href="/">Home</a>       
+          
+          <ul class="nav-content-dropdown"> 
+          <li><a href="/meet-the-committee.html">Committee</a></li>
+          </ul>
         </li>
         <li class="nav-dropdown">
-          <a href=".">Rankings</a>
+          <a href="/">Rankings</a>
 
           <ul class="nav-content-dropdown"> 
-          <li><a href="">ASD</a></li>
-          <li><a href="">ASD</a></li>
+          <li><a href="/rankings/24-25.html">ASD</a></li>
           </ul>
         </li>
     </nav>
