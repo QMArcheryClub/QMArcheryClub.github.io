@@ -43,5 +43,6 @@
 
     <footer class="screen-bar">
     </footer>
+    <script src="/static/scripts.js"></script>
   </body>
 </html>
