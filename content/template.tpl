@@ -14,6 +14,11 @@
         </a>
       <h1 class="title">Queen Mary Archery Club</h1>
     <nav class="navbar">
+      <button id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <ul id="nav-links" >
     
         <!-- Added id for JS toggle -->
@@ -33,11 +38,6 @@
           </ul>
         </li>
       </ul>
-      <button id="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </nav>
     </header>
 

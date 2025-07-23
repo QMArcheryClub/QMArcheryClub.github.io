@@ -118,7 +118,7 @@ header {
 
   /* Thing to Press */
   #nav-toggle {
-    display:flex;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
   }
@@ -136,11 +136,9 @@ header {
 
   /* Thing to Show */
   #nav-links {
+
     display: none;
     flex-direction: column;
-
-    background-color: var(--blue);
-    /* Match navbar */
 
     /* Position below the navbar */
     position: absolute;
@@ -148,6 +146,11 @@ header {
     left: 0;
 
     padding: 10px 0;
+
+    min-width: 156px;
+    box-shadow: -4px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: -3;
+    border-radius: var(--corner-rad);
   }
 
   #nav-links.active {
@@ -160,6 +163,8 @@ header {
     padding: 10px;
     border-bottom: 1px solid var(--light-gray);
     /* Separator for links */
+
+    color: var(--white);
   }
 
   #nav-links a:last-child {
