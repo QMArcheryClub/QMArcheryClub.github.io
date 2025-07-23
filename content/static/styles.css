@@ -54,23 +54,25 @@ header {
 .title {
   font-size: 1.5em;
   font-weight: bold;
-  color: white;
+  color: var(--white);
 }
 
 /* Nav Settings */
 .navbar {
+  background-color: var(--blue);
+  color: var(--white);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--blue);
-  color: white;
+
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 /* Remove bullet points from navbar links */
-.navbar > ul {
+.navbar>ul {
   list-style-type: none;
   /* Remove bullets */
   padding: 0;
@@ -82,14 +84,13 @@ header {
 
 
 /* Make Nav Links Flex */
-.nav-links {
+#nav-links {
   display: flex;
   flex-direction: column;
 }
 
 /* Make Nav Dropdown centered. */
 .nav-dropdown a {
-  color: white;
   text-decoration: none;
   display: block;
   transition: background-color 0.3s ease;
@@ -102,16 +103,70 @@ header {
   margin: 0px 0px 0px 20px;
 }
 
+/* Mobile Screen */
+@media screen and (max-width: 480px) {
+
+  /* Thing to Press */
+  #nav-toggle {
+    display:flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  #nav-toggle span {
+    background: white;
+    border-radius: 2px;
+    display: block;
+    height: 3px;
+    margin: 4px 0;
+    width: 25px;
+    transition: all 0.3s ease-in-out;
+  }
 
 
+  /* Thing to Show */
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
 
+    background-color: var(--blue);
+    /* Match navbar */
+
+    /* Position below the navbar */
+    position: absolute;
+    top: 60px;
+    left: 0;
+
+    padding: 10px 0;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  #nav-links a {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #4a6bae;
+    /* Separator for links */
+  }
+
+  #nav-links a:last-child {
+    border-bottom: none;
+  }
+
+
+}
+
+/* Deskop */
 @media screen and (min-width: 480px) {
   header {
     flex-direction: row;
     position: sticky;
   }
 
-  .nav-links {
+  #nav-links {
     flex-direction: row;
   }
 

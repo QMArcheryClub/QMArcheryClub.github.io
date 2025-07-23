@@ -4,6 +4,7 @@
     <title>QMAC</title>
     <link rel="stylesheet" href="/static/styles.css" />
     <link rel="icon" type="image/x-icon" href="/static/images/qmac-logo.jpg" />
+    <script src="/static/global.js" defer></script>
   </head>
   <body>
 
@@ -13,7 +14,7 @@
         </a>
       <h1 class="title">Queen Mary Archery Club</h1>
     <nav class="navbar">
-      <ul class="nav-links" >
+      <ul id="nav-links" >
     
         <!-- Added id for JS toggle -->
         <li class="nav-dropdown">
@@ -31,6 +32,12 @@
           <li><a href="/rankings/24-25.html">24-25</a></li>
           </ul>
         </li>
+      </ul>
+      <button id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
     </header>
 
@@ -43,6 +50,5 @@
 
     <footer class="screen-bar">
     </footer>
-    <script src="/static/scripts.js"></script>
   </body>
 </html>
