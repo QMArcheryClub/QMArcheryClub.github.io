@@ -1,6 +1,7 @@
 :root {
   --blue: #3b5998;
   --white: white;
+  --light-gray: #4a6bae;
 
   --corner-rad: 8px;
 }
@@ -18,7 +19,7 @@ body {
 }
 
 
-section.main-content {
+main {
   padding: 20px;
   margin: 20px auto;
   max-width: 900px;
@@ -106,6 +107,15 @@ header {
 /* Mobile Screen */
 @media screen and (max-width: 480px) {
 
+  button {
+    border: none;
+    background-color: var(--blue);
+  }
+
+  .nav-dropdown ul {
+    list-style-type: none;
+  }
+
   /* Thing to Press */
   #nav-toggle {
     display:flex;
@@ -128,7 +138,6 @@ header {
   #nav-links {
     display: none;
     flex-direction: column;
-    width: 100%;
 
     background-color: var(--blue);
     /* Match navbar */
@@ -143,12 +152,13 @@ header {
 
   #nav-links.active {
     display: flex;
+    background-color: var(--blue);
   }
 
   #nav-links a {
     text-align: center;
     padding: 10px;
-    border-bottom: 1px solid #4a6bae;
+    border-bottom: 1px solid var(--light-gray);
     /* Separator for links */
   }
 

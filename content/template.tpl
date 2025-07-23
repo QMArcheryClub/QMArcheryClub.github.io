@@ -26,7 +26,7 @@
           </ul>
         </li>
         <li class="nav-dropdown">
-          <a href="/">Rankings</a>
+          <a href="/rankings/index.html">Rankings</a>
 
           <ul class="nav-dropdown-content"> 
           <li><a href="/rankings/24-25.html">24-25</a></li>
@@ -44,9 +44,9 @@
 
     <!-- Navigation Bar -->
 
-    <section class="main-content">
+    <main>
       {{.}}
-    </section>
+    </main>
 
     <footer class="screen-bar">
     </footer>
