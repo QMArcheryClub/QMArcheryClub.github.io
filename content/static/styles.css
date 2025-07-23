@@ -97,6 +97,7 @@ header {
   transition: background-color 0.3s ease;
 
   padding: 10px 10px;
+  color: var(--white);
 }
 
 .nav-dropdown ul {
@@ -163,8 +164,6 @@ header {
     padding: 10px;
     border-bottom: 1px solid var(--light-gray);
     /* Separator for links */
-
-    color: var(--white);
   }
 
   #nav-links a:last-child {
@@ -176,6 +175,11 @@ header {
 
 /* Deskop */
 @media screen and (min-width: 480px) {
+
+  button {
+    display: none;
+  }
+
   header {
     flex-direction: row;
     position: sticky;
@@ -213,7 +217,6 @@ header {
 
     border-radius: var(--corner-rad);
     /* Rounded corners for the dropdown */
-
 
   }
 

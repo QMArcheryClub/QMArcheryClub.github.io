@@ -1,6 +1,3 @@
-
-# Various Roles on the Committee
-
 ## President
 
 ## Vice President
@@ -14,3 +11,11 @@
 ## Social Secretary
 
 ## Welfare Officer
+
+# Coaches
+
+## Recurve Coach
+
+## Barebow Coach
+
+## Traditional Coach
